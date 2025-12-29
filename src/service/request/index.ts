@@ -10,6 +10,20 @@ import type { RequestInstanceState } from './type';
 const isHttpProxy = import.meta.env.DEV && import.meta.env.VITE_HTTP_PROXY === 'Y';
 const { baseURL, otherBaseURL } = getServiceBaseURL(import.meta.env, isHttpProxy);
 
+function cleanParams(obj: Record<string, any>): Record<string, any> {
+  const cleaned: Record<string, any> = {};
+  for (const key in obj) {
+    if (Object.hasOwn(obj, key)) {
+      const value = obj[key];
+      // 过滤 null、undefined、空字符串（按需调整）
+      if (value !== null && value !== undefined && value !== '') {
+        cleaned[key] = value;
+      }
+    }
+  }
+  return cleaned;
+}
+
 export const request = createFlatRequest(
   {
     baseURL,
@@ -28,6 +42,11 @@ export const request = createFlatRequest(
     async onRequest(config) {
       const Authorization = getAuthorization();
       Object.assign(config.headers, { Authorization });
+
+      // 自动清理 GET 请求的查询参数中的无效值
+      if (config.params && typeof config.params === 'object') {
+        config.params = cleanParams(config.params);
+      }
 
       return config;
     },

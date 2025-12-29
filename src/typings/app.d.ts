@@ -354,6 +354,7 @@ declare namespace App {
         trigger: string;
         update: string;
         updateSuccess: string;
+        saveSuccess: string;
         userCenter: string;
         yesOrNo: {
           yes: string;
@@ -478,7 +479,108 @@ declare namespace App {
         };
       };
       route: Record<I18nRouteKey, string>;
-      page: I18nPage.AllPages;
+      page: {
+        login: {
+          common: {
+            loginOrRegister: string;
+            userNamePlaceholder: string;
+            phonePlaceholder: string;
+            codePlaceholder: string;
+            passwordPlaceholder: string;
+            confirmPasswordPlaceholder: string;
+            codeLogin: string;
+            confirm: string;
+            back: string;
+            validateSuccess: string;
+            loginSuccess: string;
+            welcomeBack: string;
+          };
+          pwdLogin: {
+            title: string;
+            rememberMe: string;
+            forgetPassword: string;
+            register: string;
+            otherAccountLogin: string;
+            otherLoginMode: string;
+            superAdmin: string;
+            admin: string;
+            user: string;
+          };
+          codeLogin: {
+            title: string;
+            getCode: string;
+            reGetCode: string;
+            sendCodeSuccess: string;
+            imageCodePlaceholder: string;
+          };
+          register: {
+            title: string;
+            agreement: string;
+            protocol: string;
+            policy: string;
+          };
+          resetPwd: {
+            title: string;
+          };
+          bindWeChat: {
+            title: string;
+          };
+        };
+        home: {
+          branchDesc: string;
+          greeting: string;
+          weatherDesc: string;
+          projectCount: string;
+          todo: string;
+          message: string;
+          downloadCount: string;
+          registerCount: string;
+          schedule: string;
+          study: string;
+          work: string;
+          rest: string;
+          entertainment: string;
+          visitCount: string;
+          turnover: string;
+          dealCount: string;
+          creativity: string;
+        };
+        system: {
+          common: {
+            status: {
+              enable: string;
+              disable: string;
+            };
+          };
+          user: {
+            title: string;
+            userName: string;
+            password: string;
+            userGender: string;
+            nickname: string;
+            userPhone: string;
+            userEmail: string;
+            userStatus: string;
+            userRole: string;
+            form: {
+              userName: string;
+              password: string;
+              userGender: string;
+              nickname: string;
+              userPhone: string;
+              userEmail: string;
+              userStatus: string;
+              userRole: string;
+            };
+            addUser: string;
+            editUser: string;
+            gender: {
+              male: string;
+              female: string;
+            };
+          };
+        };
+      };
       form: {
         required: string;
         userName: FormMsg;

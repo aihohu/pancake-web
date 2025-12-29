@@ -1,7 +1,7 @@
 import page from './page';
 import route from './route';
 
-const local = {
+const local: App.I18n.Schema = {
   route,
   page,
   system: {

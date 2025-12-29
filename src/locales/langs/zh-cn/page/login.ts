@@ -1,4 +1,4 @@
-const login = {
+const login: App.I18n.Schema['page']['login'] = {
   common: {
     loginOrRegister: '登录 / 注册',
     userNamePlaceholder: '请输入用户名',

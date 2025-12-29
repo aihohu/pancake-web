@@ -1,9 +1,7 @@
 import home from './home';
 import login from './login';
-import user from './user';
 
-const page = {
-  user,
+const page: App.I18n.Schema['page'] = {
   login,
   home
 };

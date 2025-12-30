@@ -3,7 +3,7 @@ import transformerDirectives from '@unocss/transformer-directives';
 import transformerVariantGroup from '@unocss/transformer-variant-group';
 import presetWind3 from '@unocss/preset-wind3';
 import type { Theme } from '@unocss/preset-uno';
-import { presetPancakeAdmin } from '@sa/uno-preset';
+import { presetHoHuAdmin } from '@sa/uno-preset';
 import { themeVars } from './src/theme/vars';
 
 export default defineConfig<Theme>({
@@ -26,5 +26,5 @@ export default defineConfig<Theme>({
     'card-wrapper': 'rd-8px shadow-sm'
   },
   transformers: [transformerDirectives(), transformerVariantGroup()],
-  presets: [presetWind3({ dark: 'class' }), presetPancakeAdmin()]
+  presets: [presetWind3({ dark: 'class' }), presetHoHuAdmin()]
 });

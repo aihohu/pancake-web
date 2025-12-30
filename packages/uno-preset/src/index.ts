@@ -3,7 +3,7 @@
 import type { Preset } from '@unocss/core';
 import type { Theme } from '@unocss/preset-uno';
 
-export function presetPancakeAdmin(): Preset<Theme> {
+export function presetHoHuAdmin(): Preset<Theme> {
   const preset: Preset<Theme> = {
     name: 'preset-soybean-admin',
     shortcuts: [
@@ -52,4 +52,4 @@ export function presetPancakeAdmin(): Preset<Theme> {
   return preset;
 }
 
-export default presetPancakeAdmin;
+export default presetHoHuAdmin;

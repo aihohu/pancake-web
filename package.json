@@ -1,20 +1,20 @@
 {
-  "name": "pancake-admin",
+  "name": "hohu-admin",
   "type": "module",
   "version": "2.0.2",
   "description": "A fresh and elegant admin template, based on Vue3、Vite7、TypeScript、NaiveUI and UnoCSS. 一个基于Vue3、Vite7、TypeScript、NaiveUI and UnoCSS的清新优雅的中后台模版。",
   "author": {
-    "name": "Pancake",
-    "email": "pancake@hohux.com",
+    "name": "HoHu",
+    "email": "admin@hohu.org",
     "url": "https://github.com/aihohu"
   },
   "license": "MIT",
-  "homepage": "https://github.com/aihohu/pancake-web",
+  "homepage": "https://github.com/aihohu/hohu-admin-web",
   "repository": {
-    "url": "https://github.com/aihohu/pancake-web.git"
+    "url": "https://github.com/aihohu/hohu-admin-web.git"
   },
   "bugs": {
-    "url": "https://github.com/aihohu/pancake-web/issues"
+    "url": "https://github.com/aihohu/hohu-admin-web/issues"
   },
   "keywords": [
     "Vue3 admin ",

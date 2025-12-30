@@ -1,4 +1,4 @@
-# pancake-web
+# hohu-admin-web
 
 
 ## 简介
@@ -22,7 +22,7 @@
 **克隆项目**
 
 ```
-git clone https://github.com/aihohu/pancake-web.git
+git clone https://github.com/aihohu/hohu-admin-web.git
 ```
 
 

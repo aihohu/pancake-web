@@ -47,7 +47,7 @@ const isWatermarkTextVisible = computed(
         type="text"
         size="small"
         class="w-120px"
-        placeholder="PancakeAdmin"
+        placeholder="HoHuAdmin"
       />
     </SettingItem>
   </TransitionGroup>

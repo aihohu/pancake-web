@@ -61,7 +61,7 @@
   },
   "watermark": {
     "visible": false,
-    "text": "PancakeAdmin",
+    "text": "HoHuAdmin",
     "enableUserName": false,
     "enableTime": false,
     "timeFormat": "YYYY-MM-DD HH:mm"

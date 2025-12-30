@@ -57,19 +57,6 @@ async function search() {
             <NFormItemGi span="24 s:12 m:6" :label="$t('page.system.user.userName')" path="userName" class="pr-24px">
               <NInput v-model:value="model.userName" :placeholder="$t('page.system.user.form.userName')" />
             </NFormItemGi>
-            <NFormItemGi
-              span="24 s:12 m:6"
-              :label="$t('page.system.user.userGender')"
-              path="userGender"
-              class="pr-24px"
-            >
-              <NSelect
-                v-model:value="model.userGender"
-                :placeholder="$t('page.system.user.form.userGender')"
-                :options="translateOptions(userGenderOptions)"
-                clearable
-              />
-            </NFormItemGi>
             <NFormItemGi span="24 s:12 m:6" :label="$t('page.system.user.nickname')" path="nickname" class="pr-24px">
               <NInput v-model:value="model.nickname" :placeholder="$t('page.system.user.form.nickname')" />
             </NFormItemGi>
@@ -89,6 +76,19 @@ async function search() {
                 v-model:value="model.status"
                 :placeholder="$t('page.system.user.form.userStatus')"
                 :options="translateOptions(enableStatusOptions)"
+                clearable
+              />
+            </NFormItemGi>
+            <NFormItemGi
+              span="24 s:12 m:6"
+              :label="$t('page.system.user.userGender')"
+              path="userGender"
+              class="pr-24px"
+            >
+              <NSelect
+                v-model:value="model.userGender"
+                :placeholder="$t('page.system.user.form.userGender')"
+                :options="translateOptions(userGenderOptions)"
                 clearable
               />
             </NFormItemGi>

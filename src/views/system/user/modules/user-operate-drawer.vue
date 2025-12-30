@@ -30,7 +30,7 @@ const visible = defineModel<boolean>('visible', {
 });
 
 const { formRef, validate, restoreValidation } = useNaiveForm();
-const { defaultRequiredRule } = useFormRules();
+const { defaultRequiredRule, formRules } = useFormRules();
 
 const title = computed(() => {
   const titles: Record<NaiveUI.TableOperateType, string> = {
@@ -55,11 +55,22 @@ function createDefaultModel(): Api.SystemManage.CreateUserParams {
   };
 }
 
-type RuleKey = Extract<keyof Api.SystemManage.CreateUserParams, 'userName' | 'status'>;
+type RuleKey = Extract<keyof Api.SystemManage.CreateUserParams, 'userName' | 'nickname' | 'password' | 'status'>;
 
-const rules: Record<RuleKey, App.Global.FormRule> = {
-  userName: defaultRequiredRule,
-  status: defaultRequiredRule
+const rules: Record<RuleKey, App.Global.FormRule[]> = {
+  userName: formRules.userName,
+  nickname: formRules.userName,
+  // nickname: [
+  //   defaultRequiredRule,
+  //   {
+  //     min: 4,
+  //     max: 20,
+  //     message: '昵称长度为2-20个字符',
+  //     trigger: 'blur'
+  //   }
+  // ],
+  password: formRules.pwd,
+  status: [defaultRequiredRule]
 };
 
 /** the enabled role options */
@@ -135,7 +146,10 @@ watch(visible, () => {
         <NFormItem :label="$t('page.system.user.userName')" path="userName">
           <NInput v-model:value="model.userName" :placeholder="$t('page.system.user.form.userName')" />
         </NFormItem>
-        <NFormItem :label="$t('page.system.user.password')" path="password">
+        <NFormItem :label="$t('page.system.user.nickname')" path="nickname">
+          <NInput v-model:value="model.nickname" :placeholder="$t('page.system.user.form.nickname')" />
+        </NFormItem>
+        <NFormItem v-if="props.operateType === 'add'" :label="$t('page.system.user.password')" path="password">
           <NInput
             v-model:value="model.password"
             type="password"
@@ -148,9 +162,6 @@ watch(visible, () => {
           <NRadioGroup v-model:value="model.userGender">
             <NRadio v-for="item in userGenderOptions" :key="item.value" :value="item.value" :label="$t(item.label)" />
           </NRadioGroup>
-        </NFormItem>
-        <NFormItem :label="$t('page.system.user.nickname')" path="nickname">
-          <NInput v-model:value="model.nickname" :placeholder="$t('page.system.user.form.nickname')" />
         </NFormItem>
         <NFormItem :label="$t('page.system.user.userPhone')" path="userPhone">
           <NInput v-model:value="model.userPhone" :placeholder="$t('page.system.user.form.userPhone')" />

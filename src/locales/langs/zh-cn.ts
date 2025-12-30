@@ -1,6 +1,6 @@
 const local: App.I18n.Schema = {
   system: {
-    title: 'Soybean 管理系统',
+    title: 'Pancake 管理系统',
     updateTitle: '系统版本更新通知',
     updateContent: '检测到系统有新版本发布，是否立即刷新页面？',
     updateConfirm: '立即刷新',
@@ -95,7 +95,7 @@ const local: App.I18n.Schema = {
         applySuccess: '预设应用成功',
         default: {
           name: '默认预设',
-          desc: 'Soybean 默认主题预设'
+          desc: 'Pancake 默认主题预设'
         },
         dark: {
           name: '暗色预设',
@@ -336,7 +336,7 @@ const local: App.I18n.Schema = {
     required: '不能为空',
     userName: {
       required: '请输入用户名',
-      invalid: '用户名格式不正确'
+      invalid: '用户名必须为4-16位中文、字母、数字、下划线或减号'
     },
     phone: {
       required: '请输入手机号',

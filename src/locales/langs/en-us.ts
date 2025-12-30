@@ -1,6 +1,6 @@
 const local: App.I18n.Schema = {
   system: {
-    title: 'SoybeanAdmin',
+    title: 'PancakeAdmin',
     updateTitle: 'System Version Update Notification',
     updateContent: 'A new version of the system has been detected. Do you want to refresh the page immediately?',
     updateConfirm: 'Refresh immediately',
@@ -340,7 +340,7 @@ const local: App.I18n.Schema = {
     required: 'Cannot be empty',
     userName: {
       required: 'Please enter user name',
-      invalid: 'User name format is incorrect'
+      invalid: 'Username must be 4-16 characters: Chinese, letters, numbers, underscore or hyphen'
     },
     phone: {
       required: 'Please enter phone number',

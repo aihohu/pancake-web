@@ -35,6 +35,7 @@ export function useFormRules() {
 
   const formRules = {
     userName: [createRequiredRule($t('form.userName.required')), patternRules.userName],
+    nickname: [createRequiredRule($t('form.userName.required')), patternRules.userName],
     phone: [createRequiredRule($t('form.phone.required')), patternRules.phone],
     pwd: [createRequiredRule($t('form.pwd.required')), patternRules.pwd],
     code: [createRequiredRule($t('form.code.required')), patternRules.code],

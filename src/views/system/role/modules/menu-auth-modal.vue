@@ -68,7 +68,7 @@ async function getTree() {
 }
 
 const checks = shallowRef<string[]>([]);
-const indeterminateKeys = shallowRef<string[]>([]);
+const indeterminateKeys = shallowRef<Array<string | number>>([]);
 
 async function getChecks() {
   const { error, data } = await fetchGetRoleMenuList(props.roleId);
@@ -77,6 +77,10 @@ async function getChecks() {
   }
   showSpin.value = false;
 }
+
+const handleIndeterminateKeysCheck = (keys: Array<string | number>) => {
+  indeterminateKeys.value = keys;
+};
 
 async function handleSubmit() {
   const allCheckedKeys = [...checks.value, ...indeterminateKeys.value];
@@ -127,6 +131,7 @@ watch(visible, val => {
           virtual-scroll
           block-line
           class="h-280px"
+          @update-indeterminate-keys="handleIndeterminateKeysCheck"
         />
       </NSpin>
     </NSpace>
